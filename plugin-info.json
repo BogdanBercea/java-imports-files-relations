@@ -1,0 +1,28 @@
+{
+    "id": "ces-python-component-imports-grouping",
+    "name": "Java Imports Grouping",
+    "description": "This plugin split files into components based on file imports",
+    "version": "1.0.0",
+    "schemaVersion": "1",
+    "icon": "",
+    "commands": [
+      {
+        "id": "component-imports-grouping",
+        "name": "Spring Boot Imports",
+        "type": "analyzer",
+        "description": "Generates Components based on java imports",
+        "commandTemplate": "py main.py ${outputFile} ${baseFolder}",
+        "configurationFields": [
+          {
+          "id": "baseFolder",
+          "name": "Root Folder",
+          "type": "FOLDER",
+          "description": "The absolute path to the folder where the project exist",
+          "tooltip": "The absolute value to the folder where the project exist",
+          "showDescription": false,
+          "required": true
+          }
+        ]
+      }
+    ]
+  }
