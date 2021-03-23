@@ -56,13 +56,6 @@ def groupByImports(rootFolder, outputFile, extension='.java'):
                             classesDict.setdefault(os.path.join(root, file), []).append(_class)
 
     for key, value in importsDict.items():
-        print(key)
-        print('[')
-        for v in value:
-            print(v.split('\\')[-1])
-        print(']')
-
-    for key, value in importsDict.items():
         _import = key.split('.')[-1]
         for classesDictKey, classesDictValue in classesDict.items():
             if _import in classesDictValue:
